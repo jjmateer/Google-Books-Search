@@ -4,6 +4,7 @@ import logo from "./logo.svg";
 import Header from "./components/Header/Header.js";
 import Banner from "./components/Banner/Banner.js"
 import "./App.css";
+import Search from "./components/Search/Search";
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
       <Router>
         <Header />
         <Banner />
+        <Search/>
       </Router>
     );
   }
