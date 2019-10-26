@@ -14,16 +14,13 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
 //Connect to mongoose
-var dbUrl = `mongodb+srv://jjmateer:${process.env.MONGO_PW}@cluster0-q0kab.mongodb.net/googlebooks?retryWrites=true&w=majority`;mongoose.connect(dbUrl, err => {
+var dbUrl = `mongodb+srv://jjmateer:${process.env.MONGO_PW}@cluster0-q0kab.mongodb.net/googlebooks?retryWrites=true&w=majority`;
+mongoose.connect(dbUrl, err => {
   console.log("Connected to mongoose");
   if (err) {
     console.log(err)
   }
 });
-// Define API routes here
-  // app.use(routes);
-// Send every other request to the React app
-// Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
