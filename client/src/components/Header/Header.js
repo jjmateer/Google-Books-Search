@@ -6,8 +6,8 @@ function Header() {
     <header className="mainHeader">
         <h1>Google Book Search</h1>
         <nav>
-            <a>Search</a>
-            <a>Saved</a>
+            <a href="/">Search</a>
+            <a href="/saved">Saved</a>
         </nav>
     </header>
     );

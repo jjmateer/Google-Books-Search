@@ -1,14 +1,14 @@
 import React from "react";
 import "./style.css";
 
-function Search() {
+function Search({ q, handleInputChange, handleFormSubmit }) {
     return (
         <div>
-        <form className="searchForm">
-            <h1>Book Search</h1>
-            <input></input>
-            <button className="submitBtn" type="submit">Submit</button>
-        </form>
+            <form className="searchForm">
+                <h1>Book Search</h1>
+                <input placeholder="Title" value={q} onChange={handleInputChange} required ></input>
+                <button className="submitBtn" type="submit" onClick={handleFormSubmit}>Submit</button>
+            </form>
         </div>
     )
 }
