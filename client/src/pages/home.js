@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import API from "../API.js";
 import Banner from "../components/Banner";
 import SearchForm from "../components/SearchForm";
-import Header from "../components/Header";
 
 class Home extends Component {
     state = {

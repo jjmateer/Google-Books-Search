@@ -1,22 +1,22 @@
-.searchForm {
+#searchForm {
     width:90%;
     height:30vh;
     margin:auto;
     background-color:black;
     color:white;
 }
-.searchForm h1{
+#searchForm h1{
     width:100%;
     text-align:center;
     font-size:50px;
 }
 
-.searchForm input{
+#searchForm input{
     width:90%;
     margin-left:5%;
 }
 
-.searchForm .submitBtn {
+#searchForm #submitBtn {
     padding: 0;
     width:15%;
     height:20%;

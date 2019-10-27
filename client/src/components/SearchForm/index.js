@@ -5,10 +5,10 @@ import "./style.css";
 function SearchForm({ q, handleInputChange, handleFormSubmit }) {
     return (
         <div>
-            <form className="searchForm">
+            <form id="searchForm" className="form-group">
                 <h1>Book Search</h1>
-                <input placeholder="Title" value={q} name="q" onChange={handleInputChange} required ></input>
-                <button className="submitBtn" type="submit" onClick={handleFormSubmit}>Submit</button>
+                <input className="form-control" placeholder="Title" value={q} name="q" onChange={handleInputChange} required ></input>
+                <button id="submitBtn" type="submit" onClick={handleFormSubmit}>Submit</button>
             </form>
         </div>
     )
