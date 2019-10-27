@@ -2,7 +2,7 @@
 import React from "react";
 import "./style.css";
 
-function Results({children}) {
+function Booklist({children}) {
     return (
         <div className="resultsBody">
             <h1>Results</h1>
@@ -11,4 +11,4 @@ function Results({children}) {
     )
 }
 
-export default Results;
+export default Booklist;
