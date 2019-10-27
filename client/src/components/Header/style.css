@@ -1,0 +1,29 @@
+.mainHeader{
+    width:100%;
+    height:10vh;
+    background-color:black;
+    display:flex;
+}
+.mainHeader h1 {
+    width:auto;
+    color:white;
+    line-height:100%;
+    margin:auto;
+    margin-left:2.5%;
+}
+.mainHeader nav{
+    width:20%;
+    height:100%;
+    margin-right:2.5%;
+    display:flex;
+}
+.mainHeader a {
+    font-size:50px;
+    height:100%;
+    line-height:10vh;
+    width:49%;
+    cursor: pointer;
+    text-align:center;  
+    margin:auto;
+    color:white;
+}

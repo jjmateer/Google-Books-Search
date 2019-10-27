@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Banner from "../components/Banner/Banner.js";
-import Search from "../components/Search/Search.js";
-import Results from "../components/Results/Results.js";
-import Book from "../components/Book/Book.js";
 import API from "../API.js";
-// import Container from "../components/Results/Results";
+import Banner from "../components/Banner";
+import SearchForm from "../components/SearchForm";
+import Header from "../components/Header";
 
 class Home extends Component {
     state = {
@@ -50,6 +48,14 @@ class Home extends Component {
         }).then(() => this.getBooks());
     };
     render() {
+        return (
+            <div>
+                <Banner />
+                <SearchForm>
+
+                </SearchForm>
+            </div>
+        )
     }
 }
 

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/home";
 import Saved from "./pages/saved";
-import Header from "./components/Header/Header.js";
+import Header from "./components/Header";
 import "./App.css";
 
 class App extends Component {
