@@ -29,7 +29,6 @@ class Home extends Component {
             );
     };
     handleInputChange = event => {
-        console.log(name)
         const { name, value } = event.target;
         this.setState({
             [name]: value
