@@ -14,6 +14,7 @@
 #searchForm input{
     width:90%;
     margin-left:5%;
+    text-shadow:none;
 }
 
 #searchForm #submitBtn {
