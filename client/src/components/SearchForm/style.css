@@ -2,13 +2,13 @@
     width:90%;
     height:30vh;
     margin:auto;
-    background-color:black;
+    background-color:#343a40;
     color:white;
+    border-radius:2px;
 }
 #searchForm h1{
     width:100%;
     text-align:center;
-    font-size:50px;
 }
 
 #searchForm input{
@@ -17,15 +17,10 @@
 }
 
 #searchForm #submitBtn {
-    padding: 0;
     width:15%;
     height:20%;
     margin:auto;
     margin-right:5%;
-    margin-top:5px;
+    margin-top:2%;
     float:right;
-    background:white;
-    outline:none;
-    border:none;
-    cursor: pointer;
 }
