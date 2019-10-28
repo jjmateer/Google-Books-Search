@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import SearchForm from "../components/SearchForm";
 import Card from "../components/Card";
 import Book from "../components/Book";
-import { Col, Row, Container } from "../components/Grid";
+import { Col, Row } from "../components/Grid";
 import { List } from "../components/List";
 class Home extends Component {
     state = {
@@ -17,6 +17,7 @@ class Home extends Component {
         this.setState({
             [name]: value
         });
+
     };
     handleFormSubmit = event => {
         event.preventDefault();
@@ -25,9 +26,10 @@ class Home extends Component {
     getBooks = () => {
         API.getBooks(this.state.q)
             .then(res =>
-                this.setState({
-                    books: res.data
-                })
+                console.log(res.data)
+                // this.setState({
+                //     books: res.data
+                // })
             )
             .catch(() =>
                 this.setState({
