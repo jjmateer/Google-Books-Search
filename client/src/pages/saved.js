@@ -17,10 +17,10 @@ class Saved extends Component {
     getSavedBooks = () => {
         API.getSavedBooks()
             .then(res =>
-                console.log(res.data)
-                // this.setState({
-                //     books: res.data
-                // })
+                // console.log(res.data)
+                this.setState({
+                    books: res.data
+                })
             )
             .catch(err => console.log(err));
     };
@@ -38,16 +38,13 @@ class Saved extends Component {
                                         title={book.title}
                                         subtitle={book.subtitle}
                                         link={book.link}
-                                        authors={book.authors.join(", ")}
+                                        authors={book.authors}
                                         description={book.description}
                                         image={book.image}
                                         Button={() => (
                                             <button
                                                 onClick={() => this.handleBookDelete(book._id)}
-                                                className="btn btn-danger ml-2"
-                                            >
-                                                Delete
-                        </button>
+                                                className="btn btn-danger ml-2">Delete</button>
                                         )}
                                     />
                                 </ListItem>

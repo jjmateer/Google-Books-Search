@@ -12,7 +12,7 @@ export default {
     return axios.delete("/api/books/" + id);
   },
   saveBook: function (bookData) {
-    // console.log(bookData)
+    console.log(bookData)
     return axios.post("/api/books", bookData)
       .catch(err => console.log(err))
   }
