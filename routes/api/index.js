@@ -5,7 +5,7 @@ const searchRoutes = require("./search");
 
 router.use("/books", bookRoutes);
 
-router.use("/search", searchRoutes);
+router.use("/google", searchRoutes);
 
 router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../../client/build/index.html"));
