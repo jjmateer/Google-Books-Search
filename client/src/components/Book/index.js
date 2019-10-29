@@ -1,5 +1,5 @@
 import React from "react";
-// import { ListItem } from "../List";
+import "./style.css";
 
 function Book({ title, subtitle, authors, link, description, image, Button }) {
   return (
@@ -11,8 +11,9 @@ function Book({ title, subtitle, authors, link, description, image, Button }) {
           View
             </a>
         <p className="font-italic small">Written by {authors}</p>
-        <img className="img-thumbnail img-fluid w-100" src={image} alt={title} />
+        <img className="img-thumbnailw-100" src={image} alt={title} />
         <p>{description}</p>
+        <Button />
       </div>
     </div>
   );

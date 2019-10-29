@@ -15,7 +15,7 @@ class Home extends Component {
         const { name, value } = event.target;
         this.setState({
             [name]: value
-        });
+        })
 
     };
     handleFormSubmit = event => {
@@ -75,7 +75,7 @@ class Home extends Component {
                                         Button={() => (
                                             <button
                                                 onClick={() => this.handleBookSave(book.id)}
-                                                className="btn btn-primary"> Save</button>
+                                                className="btn btn-light"> Save</button>
                                         )}
                                     />
                                 </ListItem>
