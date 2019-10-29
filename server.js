@@ -10,7 +10,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(router);
-// app.get("/test", (req, res) => res.json({ message: "hello" }))
+app.get("/test", (req, res) => res.json({ message: "hello" }))
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
