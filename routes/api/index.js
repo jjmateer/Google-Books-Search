@@ -4,8 +4,8 @@ const bookRoutes = require("./books");
 
 router.use("/books", bookRoutes);
 
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../../client/build/index.html"));
+router.use(function (req, res) {
+    res.sendFile(path.join(__dirname, "../../client/public/index.html"));
 });
 
 module.exports = router;
