@@ -25,7 +25,6 @@ class Home extends Component {
     getBooks = () => {
         API.getBooks(this.state.q)
             .then(res =>
-                // console.log(res.data.items)
                 this.setState({
                     books: res.data.items
                 })
@@ -38,7 +37,6 @@ class Home extends Component {
             );
     };
     handleBookSave = id => {
-        // console.log(id)
         const book = this.state.books.find(book => book.id === id);
 
         API.saveBook({
@@ -76,7 +74,7 @@ class Home extends Component {
                                         Button={() => (
                                             <button
                                                 onClick={() => this.handleBookSave(book.id)}
-                                                className="btn btn-light"> Save</button>
+                                                className="btn btn-success"> Save</button>
                                         )}
                                     />
                                 </ListItem>
