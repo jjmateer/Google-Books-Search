@@ -10,7 +10,6 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
-app.get("/test", (req, res) => res.json({ message: "hello" }))
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
@@ -31,10 +30,11 @@ if (process.env.NODE_ENV === "production") {
   });
 } else {
   app.use(express.static(path.join(__dirname, '/client/public')));
-  app.get("/*", function (req, res) {
+  app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "./client/public/index.html"));
   });
 }
+
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
