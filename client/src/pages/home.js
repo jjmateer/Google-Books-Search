@@ -25,7 +25,6 @@ class Home extends Component {
     getBooks = () => {
         API.getBooks(this.state.q)
             .then(res =>
-                // console.log(res.data.items)
                 this.setState({
                     books: res.data.items
                 })
@@ -38,17 +37,16 @@ class Home extends Component {
             );
     };
     handleBookSave = id => {
-        // console.log(id)
         const book = this.state.books.find(book => book.id === id);
 
         API.saveBook({
             googleId: book.id,
             title: book.volumeInfo.title,
-            subtitle: book.volumeInfo.subtitle,
+            subtitle: book.volumeInfo.subtitle ? book.volumeInfo.subtitle : "No subtitle available",
             link: book.volumeInfo.infoLink,
-            authors: book.volumeInfo.authors,
-            description: book.volumeInfo.description,
-            image: book.volumeInfo.imageLinks.thumbnail
+            authors: book.volumeInfo.authors ? book.volumeInfo.authors : "No authors available.",
+            description: book.volumeInfo.description ? book.volumeInfo.description : "No description available.",
+            image: book.volumeInfo.imageLinks.thumbnail ? book.volumeInfo.imageLinks.thumbnail : "No thumbnail available."
         }).then(() => this.getBooks());
     };
     render() {
@@ -67,16 +65,16 @@ class Home extends Component {
                                 <ListItem key={book.id}>
                                     <Book
                                         key={book.id}
-                                        title={book.volumeInfo.title}
+                                        title={book.volumeInfo.title ? book.volumeInfo.title : "No title available."}
                                         subtitle={book.volumeInfo.subtitle}
                                         link={book.volumeInfo.infoLink}
-                                        authors={book.volumeInfo.authors}
-                                        description={book.volumeInfo.description}
-                                        image={book.volumeInfo.imageLinks.thumbnail}
+                                        authors={book.volumeInfo.authors ? book.volumeInfo.authors : "No authors available."}
+                                        description={book.volumeInfo.description ? book.volumeInfo.description : "No description available."}
+                                        image={book.volumeInfo.imageLinks.thumbnail ? book.volumeInfo.imageLinks.thumbnail : "No image available."}
                                         Button={() => (
                                             <button
                                                 onClick={() => this.handleBookSave(book.id)}
-                                                className="btn btn-light"> Save</button>
+                                                className="btn btn-success"> Save</button>
                                         )}
                                     />
                                 </ListItem>
