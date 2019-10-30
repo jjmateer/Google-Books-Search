@@ -47,7 +47,8 @@ class Home extends Component {
             authors: book.volumeInfo.authors ? book.volumeInfo.authors : "No authors available.",
             description: book.volumeInfo.description ? book.volumeInfo.description : "No description available.",
             image: book.volumeInfo.imageLinks.thumbnail ? book.volumeInfo.imageLinks.thumbnail : "No thumbnail available."
-        }).then(() => this.getBooks());
+        }).then(() => this.getBooks())
+        .then(() => alert("Book saved!"))
     };
     render() {
         return (
@@ -64,7 +65,7 @@ class Home extends Component {
                             {this.state.books.map(book => (
                                 <ListItem key={book.id}>
                                     <Book
-                                        key={book.id}
+                                        key={book.id} 
                                         title={book.volumeInfo.title ? book.volumeInfo.title : "No title available."}
                                         subtitle={book.volumeInfo.subtitle}
                                         link={book.volumeInfo.infoLink}
