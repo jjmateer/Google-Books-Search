@@ -1,6 +1,7 @@
 #searchForm {
     width:90%;
-    height:30vh;
+    min-height:25vh;
+    height:auto;
     margin:auto;
     background-color:#343a40;
     color:white;
@@ -18,7 +19,7 @@
 }
 
 #searchForm #submitBtn {
-    width:15%;
+    min-width:15vw;
     height:20%;
     margin:auto;
     margin-right:5%;
