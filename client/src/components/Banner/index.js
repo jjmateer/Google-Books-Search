@@ -7,6 +7,6 @@ function Banner() {
             <h1>Google Books Search</h1>
         </div>
     </div>
-}
+};
 
 export default Banner;
