@@ -1,6 +1,7 @@
 #results {
     width:90%;
     margin:auto;
+    box-shadow: 5px 10px 8px #888888;
 }
 strong {
     color:white;

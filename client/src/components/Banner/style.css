@@ -4,6 +4,7 @@
     background-size:cover;
     background-repeat:no-repeat;
     color:white;
+    box-shadow: 5px 10px 8px #888888;
 }
 
 #banner h1 {
