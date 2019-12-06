@@ -6,6 +6,7 @@ This is a simple MERN stack application which uses the Google Books API to searc
 
 Users can save books to a list to view later.
 
+## Technology used
 - React.js
 - MongoDB
 - Express.js
